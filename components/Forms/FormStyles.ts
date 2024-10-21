@@ -1,4 +1,3 @@
-// cSpell:ignore Roboto
 import { StyleSheet } from "react-native";
 import { colors } from "../../styles/global";
 const styles = StyleSheet.create({

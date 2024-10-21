@@ -1,7 +1,6 @@
 import React from "react";
 import { Field } from "../../utils/types";
 
-
 interface FormProps {
   fields: Field[];
   passwordVisible: boolean;

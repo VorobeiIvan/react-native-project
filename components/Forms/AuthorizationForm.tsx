@@ -2,9 +2,9 @@ import React from "react";
 import Form from "./Form";
 import { useFormFields } from "../../hooks";
 
-
 const AuthorizationForm = () => {
-  const { fields, passwordVisible, togglePasswordVisible } = useFormFields(false); 
+  const { fields, passwordVisible, togglePasswordVisible } =
+    useFormFields(false);
 
   const handleAuthorization = () => {
     const email = fields[0].value;

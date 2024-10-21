@@ -4,7 +4,8 @@ import { useFormFields } from "../../hooks";
 import { isValidEmail } from "../../utils/formHelpers";
 
 const RegistrationForm: React.FC = () => {
-  const { fields, passwordVisible, togglePasswordVisible } = useFormFields(true); 
+  const { fields, passwordVisible, togglePasswordVisible } =
+    useFormFields(true);
 
   const handleRegistration = () => {
     const login = fields[0].value;

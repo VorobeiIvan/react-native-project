@@ -1,3 +1,5 @@
+<!-- cSpell:ignore Vorobei -->
+
 # React Native Project
 
 Цей проект є прикладом застосування React Native з використанням Expo та TypeScript.
@@ -25,13 +27,13 @@ brew install node
 
 ### 2. Встановлення Git
 
-#### macOS:
+#### macOS
 
 ```bash
 brew install git
 ```
 
-#### Windows:
+#### Windows
 
 Завантажте та встановіть Git з [офіційного сайту Git](https://git-scm.com/downloads).
 
@@ -43,13 +45,13 @@ npm install -g expo-cli
 
 ### 4. Встановлення GitHub CLI
 
-#### macOS:
+#### macOS GitHub CLI
 
 ```bash
 brew install gh
 ```
 
-#### Windows:
+#### Windows GitHub CLI
 
 Завантажте з [офіційного сайту GitHub CLI](https://cli.github.com/).
 
@@ -157,4 +159,35 @@ yarn add expo-font
 yarn add react-native-svg
 #розширити перелік базових бібліотек та пакетів на вибір, прописати коментарі до кожної та посилання на опис
 npx expo start
+
+#(Відкрийте файл конфігурації cspell.json або створіть його, якщо він відсутній, у кореневій директорії проекту.
+Додайте підтримку української мови:
+json
+Копіювати код
+{
+"language": "en,uk",
+"dictionaries": ["ukrainian"]
+}
+Встановити відповідний словник:
+
+Використайте команду для встановлення українського словника:
+bash
+Копіювати код
+npm install -D cspell-dict-uk-ua
+Оновити конфігурацію cSpell:
+
+Додайте словник до списку конфігурацій:
+json
+Копіювати код
+{
+"language": "uk,en",
+"dictionaryDefinitions": [
+{
+"name": "ukrainian",
+"path": "./node_modules/cspell-dict-uk-ua/uk-ua.txt"
+}
+],
+"dictionaries": ["ukrainian", "en"]
+}
+Після цих змін cSpell почне розпізнавати українські слова.)
 ```

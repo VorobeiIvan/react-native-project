@@ -2,24 +2,24 @@ import { TextInput, View, ViewProps, TextInputProps } from "react-native";
 import { FC, useState } from "react";
 import styles from "./InputStyles";
 
-// Extend TextInputProps to include the necessary types
+// Define InputProps without ChangeEvent
 type InputProps = {
   value: string;
   placeholder?: string;
   outerStyles?: ViewProps["style"];
   rightButton?: React.ReactNode;
-  onTextChange: (value: string) => void;
+  onChangeText?: (text: string) => void; // Corrected to accept a string
   secureTextEntry?: boolean;
   autofocus?: boolean;
-  inputMode?: TextInputProps["inputMode"]; // Using the correct type
+  inputMode?: TextInputProps["inputMode"];
   maxLength?: number;
-  textContentType?: TextInputProps["textContentType"]; // Using the correct type
-  keyboardType?: TextInputProps["keyboardType"]; // Using the correct type
+  textContentType?: TextInputProps["textContentType"];
+  keyboardType?: TextInputProps["keyboardType"];
 };
 
 const Input: FC<InputProps> = ({
   value,
-  onTextChange,
+  onChangeText,
   placeholder,
   outerStyles,
   rightButton,
@@ -45,17 +45,17 @@ const Input: FC<InputProps> = ({
       <TextInput
         value={value}
         autoFocus={autofocus}
-        onChangeText={onTextChange}
+        onChangeText={onChangeText} // Directly use onChangeText
         placeholder={placeholder}
         secureTextEntry={secureTextEntry}
         style={styles.text}
         autoCapitalize="none"
         onFocus={onFocus}
         onBlur={onBlur}
-        maxLength={maxLength} // Use the maxLength prop here
-        inputMode={inputMode} // Now uses the correct type
-        textContentType={textContentType} // Now uses the correct type
-        keyboardType={keyboardType} // Now uses the correct type
+        maxLength={maxLength}
+        inputMode={inputMode}
+        textContentType={textContentType}
+        keyboardType={keyboardType}
       />
       {rightButton}
     </View>

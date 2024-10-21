@@ -1,5 +1,8 @@
 import React from "react";
+import { View, Button, Text, TouchableOpacity } from "react-native";
+import styles from "./FormStyles";
 import { Field } from "../../utils/types";
+import Input from "../Input/Input";
 
 interface FormProps {
   fields: Field[];
@@ -23,31 +26,29 @@ const Form: React.FC<FormProps> = ({
   handleAlternativeAction,
 }) => {
   return (
-    <div>
+    <View>
       {fields.map((field, index) => (
-        <input
+        <Input
           key={index}
-          type={field.secureTextEntry ? "password" : "text"}
+          secureTextEntry={field.secureTextEntry && !passwordVisible} // Правильна логіка
           value={field.value}
           placeholder={field.placeholder}
-          onChange={field.onChange}
           maxLength={field.maxLength}
-          inputMode={field.inputMode}
+          inputMode={field.inputMode} // Це вже правильний тип
         />
       ))}
-      <button type="button" onClick={togglePasswordVisible}>
-        {passwordVisible ? "Сховати пароль" : "Показати пароль"}
-      </button>
-      <button type="button" onClick={handleSubmit}>
-        {submitText}
-      </button>
-      <p>
+      <Button
+        title={passwordVisible ? "Сховати пароль" : "Показати пароль"}
+        onPress={togglePasswordVisible}
+      />
+      <Button title={submitText} onPress={handleSubmit} />
+      <Text>
         {alternativeText}{" "}
-        <span role="button" onClick={handleAlternativeAction}>
-          {alternativeActionText}
-        </span>
-      </p>
-    </div>
+        <TouchableOpacity onPress={handleAlternativeAction}>
+          <Text>{alternativeActionText}</Text>
+        </TouchableOpacity>
+      </Text>
+    </View>
   );
 };
 

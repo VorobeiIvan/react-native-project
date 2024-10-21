@@ -17,7 +17,7 @@ type ButtonProps = {
   buttonStyle?: ViewStyle;
   text?: string;
   imageSource?: ImageSourcePropType; // Виправлений тип для зображення
-  iconUri?: string; // Додано тип для iconUri
+  // iconUri?: string; // Додано тип для iconUri
 };
 
 const Button: FC<ButtonProps> = ({
@@ -26,11 +26,11 @@ const Button: FC<ButtonProps> = ({
   buttonStyle,
   text,
   imageSource,
-  iconUri,
+  // iconUri,
 }) => {
   return (
     <TouchableOpacity style={[styles.button, buttonStyle]} onPress={onPress}>
-      {iconUri && <Icon uri={iconUri} width={24} height={24} />}
+      {/* {iconUri && <Icon uri={iconUri} width={24} height={24} />} */}
       {imageSource && <Image source={imageSource} style={styles.image} />}
       {text && <Text style={styles.text}>{text}</Text>}
       {children}

@@ -4,7 +4,7 @@ import {
   colors,
   fontFamily,
   fontSizes,
-  fontWeights,
+  // fontWeights,
   lineHeights,
   padding,
 } from "../../styles/global";
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     borderColor: colors.orange,
   },
   text: {
-    fontWeight: "400",
+    // fontWeight: "400",
     fontSize: fontSizes.text,
     lineHeight: lineHeights.text,
     color: colors.black_primary,

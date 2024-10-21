@@ -1,5 +1,6 @@
-import { RegistrationScreen } from "./screens";
+import { Text } from "react-native";
+import { LoginScreen, RegistrationScreen } from "./screens";
 
 export default function App() {
-  return <RegistrationScreen />;
+  return <LoginScreen />;
 }

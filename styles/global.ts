@@ -11,12 +11,11 @@ const colors: { [key: string]: string } = {
 const fontFamily: { [key: string]: string } = {
   Roboto: "Roboto",
 };
-
-const fontWeights: { [key: string]: string } = {
-  regular: "400",
-  medium: "500",
-  bold: "700",
-};
+// const fontWeights: { [key: string]: string } = {
+//   regular: "400",
+//   medium: "500",
+//   bold: "700",
+// };
 
 const fontSizes: { [key: string]: number } = {
   title: 30,
@@ -70,7 +69,6 @@ const margin: { [key: string]: number } = {
 export {
   colors,
   fontFamily,
-  fontWeights,
   fontSizes,
   letterSpacings,
   lineHeights,

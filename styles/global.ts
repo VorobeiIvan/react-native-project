@@ -1,3 +1,4 @@
+// cSpell:ignore Roboto
 const colors: { [key: string]: string } = {
   white: "#FFFFFF",
   black_primary: "#212121",

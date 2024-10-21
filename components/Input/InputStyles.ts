@@ -1,3 +1,4 @@
+// cSpell:ignore Roboto
 import { StyleSheet } from "react-native";
 import {
   borderRadius,

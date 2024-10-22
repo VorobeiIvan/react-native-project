@@ -2,14 +2,7 @@ import { StyleSheet } from "react-native";
 import { borderRadius, colors } from "../../styles/global";
 
 const styles = StyleSheet.create({
-  avatarContainer: {
-    width: 120,
-    height: 120,
-    borderRadius: borderRadius.avatar,
-    backgroundColor: colors.light_gray,
-    alignSelf: "center",
-    marginTop: -60,
-  },
+
 
   addAvatarButton: {
     position: "absolute",

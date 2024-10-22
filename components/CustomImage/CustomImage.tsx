@@ -8,7 +8,9 @@ type ImgProps = {
 };
 
 const CustomImage: React.FC<ImgProps> = ({ type = "image", source }) => {
-  return <Image source={{ uri: source }} style={styles[type]} />;
+  return (
+    <Image source={{ uri: source }} style={[styles[type], styles.image]} />
+  );
 };
 
 export default CustomImage;

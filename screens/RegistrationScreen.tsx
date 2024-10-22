@@ -1,16 +1,16 @@
-import { ImageBackground } from "react-native";
-import { Avatar, RegistrationForm, Title } from "../components";
+import { Avatar, CustomImage, RegistrationForm, Title } from "../components";
 
 import IMAGES from "../constants/images";
 import Container from "../components/Containers/Container";
+import { TITLE } from "../constants";
 
 const RegistrationScreen = () => {
   return (
     <Container type="container">
-      <Image source={IMAGES.MAIN_BACKGROUND} style={styles.image} />
+      <CustomImage source={IMAGES.MAIN_BACKGROUND} type={"backgroundImage"} />
       <Container type="contentContainer">
         <Avatar />
-        <Title text="REGISTRATION_TITLE" />
+        <Title text={TITLE.MAIN_TITLE_REGISTRATION} />
         <RegistrationForm />
       </Container>
     </Container>

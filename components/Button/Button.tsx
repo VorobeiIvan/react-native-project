@@ -1,37 +1,37 @@
 import { FC } from "react";
-import {
-  Text,
-  TouchableOpacity,
-  ViewStyle,
-  Image,
-  ImageSourcePropType,
-} from "react-native";
-
-import Icon from "../Icon/Icon";
-
+import { Text, TouchableOpacity } from "react-native";
 import styles from "./ButtonStyles";
+import CustomImage from "../CustomImage/CustomImage";
+import Icon from "../Icon/Icon";
 
 type ButtonProps = {
   children?: React.ReactNode;
   onPress: () => void;
-  buttonStyle?: ViewStyle;
+  imageSource?: string;
+  iconUri?: string;
+  imageType?: "image" | "backgroundImage";
+  iconType?: keyof typeof styles;
   text?: string;
-  imageSource?: ImageSourcePropType;
+  type?: keyof typeof styles;
 };
 
 const Button: FC<ButtonProps> = ({
   children,
   onPress,
-  buttonStyle,
-  text,
+  imageType = "image",
   imageSource,
-  // iconUri,
+  iconUri,
+  iconType = "icon",
+  text = "",
+  type = "button",
 }) => {
   return (
-    <TouchableOpacity style={[styles.button, buttonStyle]} onPress={onPress}>
-      {/* {iconUri && <Icon uri={iconUri} width={24} height={24} />} */}
-      {imageSource && <Image source={imageSource} style={styles.image} />}
-      {text && <Text style={styles.text}>{text}</Text>}
+    <TouchableOpacity style={[styles[type], styles.button]} onPress={onPress}>
+      {iconUri && <Icon uri={iconUri} type={iconType} />}
+      {imageSource && imageType && (
+        <CustomImage type={imageType} source={imageSource} />
+      )}
+      {text && <Text style={styles.buttonText}>{text}</Text>}
       {children}
     </TouchableOpacity>
   );

@@ -1,37 +1,35 @@
 import { FC, useState } from "react";
-import { View, Image, ImageSourcePropType } from "react-native";
-
-import { images, icons } from "../../utils";
-import styles from "./AvatarStyles";
-import Button from "../Button/Button";
+import Container from "../Containers/Container";
+import CustomImage from "../CustomImage/CustomImage";
+import { BUTTON, ICONS, IMAGES } from "../../constants";
+import { Button } from "..";
 
 type AvatarProps = {};
 
 const Avatar: FC<AvatarProps> = () => {
-  const [avatarImage, setAvatarImage] = useState<ImageSourcePropType>(
-    images.avatar
-  );
-  const [icon, setIcon] = useState(icons.add);
+  const [avatarImage, setAvatarImage] = useState(IMAGES.DEFAULT_AVATAR);
+  const [icon, setIcon] = useState(ICONS.ADD_AVATAR_BUTTON);
 
   const handleAvatarChange = () => {
-    if (icon === icons.add) {
-      setIcon(icons.remove);
-      setAvatarImage(images.avatar);
+    if (icon === ICONS.ADD_AVATAR_BUTTON) {
+      setIcon(ICONS.REMOVE_AVATAR_BUTTON);
+      setAvatarImage(IMAGES.DEFAULT_AVATAR);
     } else {
-      setIcon(icons.add);
-      setAvatarImage(images.girl);
+      setIcon(ICONS.ADD_AVATAR_BUTTON);
+      setAvatarImage(IMAGES.GIRL);
     }
   };
 
   return (
-    <View style={styles.avatarContainer}>
-      <Image source={avatarImage} style={styles.image} />
+    <Container type="avatarContainer">
+      <CustomImage source={IMAGES.DEFAULT_AVATAR} />
       <Button
-        iconUri={icon}
-        buttonStyle={styles.addAvatarButton}
-        onPress={handleAvatarChange}
+
+      // iconUri={icon}
+      // buttonStyle={styles.addAvatarButton}
+      // onPress={handleAvatarChange}
       />
-    </View>
+    </Container>
   );
 };
 

@@ -3,6 +3,7 @@ import { Avatar, AuthorizationForm, Title } from "../components";
 import Container from "../components/Containers/Container";
 import IMAGES from "../constants/images";
 import CustomImage from "../components/CustomImage/CustomImage";
+import { TITLE } from "../constants";
 
 const LoginScreen = () => {
   return (
@@ -11,7 +12,7 @@ const LoginScreen = () => {
 
       <Container type={"contentContainer"}>
         <Avatar />
-        <Title text={"AUTHORIZATION_TITLE"} />
+        <Title text={TITLE.MAIN_TITLE_AUTHORIZATION} />
         <AuthorizationForm />
       </Container>
     </Container>

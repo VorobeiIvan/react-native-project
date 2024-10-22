@@ -2,10 +2,13 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   button: {},
-  image: {},
-  icon: {},
-  text: {},
-  buttonText: {},
+  primary: {},
+  secondary: {},
+  removePasswordVisible: {},
+  topNavigation: {},
+  bottomNavigation: {},
+  message: {},
+  like: {},
 });
 
 export default styles;

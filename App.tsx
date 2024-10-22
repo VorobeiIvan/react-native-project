@@ -1,6 +1,6 @@
-import { Text } from "react-native";
-import { LoginScreen, RegistrationScreen } from "./screens";
+import Title from "./components/Title/Title";
+import { TITLE } from "./constants";
 
 export default function App() {
-  return <LoginScreen />;
+  return <Title text={TITLE.MAIN_TITLE_REGISTRATION} />;
 }

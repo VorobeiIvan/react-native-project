@@ -1,4 +1,7 @@
-const colors: { [key: string]: string } = {
+// styles.ts
+
+// Об'єкт для кольорів
+const Colors = {
   white: "#FFFFFF",
   black_primary: "#212121",
   light_gray: "#F6F6F6",
@@ -8,31 +11,35 @@ const colors: { [key: string]: string } = {
   orange: "#FF6C00",
 };
 
-const fontFamily: { [key: string]: string } = {
-  Roboto: "Roboto",
+// Об'єкт для шрифтів
+const Fonts = {
+  family: {
+    Roboto: "Roboto",
+  },
+  sizes: {
+    title: 30,
+    navigation: 17,
+    text: 16,
+    comments: 13,
+    subtitle: 13,
+    lightText: 11,
+    date: 10,
+  },
+  weights: {
+    regular: "400",
+    medium: "500",
+    bold: "700",
+  },
 };
-// const fontWeights: { [key: string]: string } = {
-//   regular: "400",
-//   medium: "500",
-//   bold: "700",
-// };
 
-const fontSizes: { [key: string]: number } = {
-  title: 30,
-  navigation: 17,
-  text: 16,
-  comments: 13,
-  subtitle: 13,
-  lightText: 11,
-  date: 10,
-};
-
-const letterSpacings: { [key: string]: number } = {
+// Об'єкт для міжбуквенних інтервалів
+const LetterSpacings = {
   title: 0.3,
   navigation: -0.41,
 };
 
-const lineHeights: { [key: string]: number } = {
+// Об'єкт для висот рядків
+const LineHeights = {
   date: 12,
   lightText: 13,
   subtitle: 15,
@@ -42,7 +49,8 @@ const lineHeights: { [key: string]: number } = {
   title: 35,
 };
 
-const borderRadius: { [key: string]: number } = {
+// Об'єкт для закруглення країв
+const BorderRadius = {
   comment: 6,
   input: 8,
   contentBlock: 8,
@@ -51,13 +59,15 @@ const borderRadius: { [key: string]: number } = {
   button: 100,
 };
 
-const padding: { [key: string]: number } = {
+// Об'єкт для внутрішніх відступів
+const Padding = {
   input: 16,
   buttonVertical: 16,
   buttonHorizontal: 32,
 };
 
-const margin: { [key: string]: number } = {
+// Об'єкт для зовнішніх відступів
+const Margin = {
   smallIconText: 4, // Відступи від іконки до тексту
   mediumIconText: 6, // Відступи від іконки до тексту (інший варіант)
   regular: 16, // Відступи між елементами в окремому блоці
@@ -66,13 +76,13 @@ const margin: { [key: string]: number } = {
   date: 8, // Відступ до дати
 };
 
+// Експорт об'єктів
 export {
-  colors,
-  fontFamily,
-  fontSizes,
-  letterSpacings,
-  lineHeights,
-  borderRadius,
-  padding,
-  margin,
+  Colors,
+  Fonts,
+  LetterSpacings,
+  LineHeights,
+  BorderRadius,
+  Padding,
+  Margin,
 };

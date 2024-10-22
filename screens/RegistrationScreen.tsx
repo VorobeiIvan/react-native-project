@@ -1,24 +1,24 @@
-import { ImageBackground, View } from "react-native";
+import { ImageBackground} from "react-native";
 import { Avatar, RegistrationForm, Title } from "../components";
-import { images } from "../utils";
+
 
 import styles from "./ScreenStyles";
+import IMAGES from "../constants/imageConstants";
+import Container from "../components/Containers/Container";
 
 const RegistrationScreen = () => {
   return (
-    <View style={styles.container}>
+    <Container type="container" >
       <ImageBackground
-        source={images.bg}
-        resizeMode="cover"
+        source={IMAGES.MAIN_BACKGROUND}
         style={styles.image}
       />
-
-      <View style={styles.contentContainer}>
+      <Container type="contentContainer" >
         <Avatar />
-        <Title text="Реєстрація" />
+        <Title text="REGISTRATION_TITLE" />
         <RegistrationForm />
-      </View>
-    </View>
+      </Container>
+    </Container>
   );
 };
 

@@ -26,11 +26,14 @@ const COLORS = {
       DATE: 10,
     },
     WEIGHTS: {
-      REGULAR: "400",
-      MEDIUM: "500",
-      BOLD: "700",
+      REGULAR: "400" as const,
+      MEDIUM: "500" as const,
+      BOLD: "700" as const,
     },
   };
+  
+  // Тип для шрифтів
+  export type FontWeight = typeof FONTS.WEIGHTS[keyof typeof FONTS.WEIGHTS];
   
   // Об'єкт для міжбуквенних інтервалів
   const LETTER_SPACINGS = {
@@ -68,13 +71,13 @@ const COLORS = {
   
   // Об'єкт для зовнішніх відступів
   const MARGIN = {
-    SMALL_ICON_TEXT: 4, // Відступи від іконки до тексту
-    MEDIUM_ICON_TEXT: 6, // Відступи від іконки до тексту (інший варіант)
-    REGULAR: 16, // Відступи між елементами в окремому блоці
-    BLOCK: 32, // Відступи між блоками
-    BUTTON_BLOCK: 44, // Відступ від блоку кнопок
-    DATE: 8, // Відступ до дати
-  };
+    SMALL_ICON_TEXT: 4, // Відступ між маленькою іконкою та текстом
+    MEDIUM_ICON_TEXT: 6, // Відступ між середньою іконкою та текстом
+    ELEMENT_SPACING: 16, // Відступ між елементами в одному блоці
+    BLOCK_SPACING: 32, // Відступ між різними блоками
+    BUTTON_GROUP_SPACING: 44, // Відступ між кнопками в блоці
+    DATE_SPACING: 8, // Відступ перед датою
+};
   
   // Експорт об'єктів
   export {

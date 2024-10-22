@@ -1,10 +1,7 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../styles/global";
 const styles = StyleSheet.create({
-  inputContainer: {
-    gap: 16,
-    marginHorizontal: 16,
-  },
+  
 
   togglePasswordVisibleButton: {
     position: "absolute",
@@ -32,10 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  buttonContainer: {
-    gap: 16,
-    marginVertical: 44,
-  },
+
   secondaryButton: {
     justifyContent: "center",
     alignItems: "center",

@@ -1,0 +1,13 @@
+const BORDER_RADIUS = {
+  COMMENT: 6,
+  INPUT: 8,
+  CONTENT_BLOCK: 8,
+  AVATAR: 16,
+  CONTAINER: 24,
+  BUTTON: 100,
+};
+
+export default {
+  BORDER_RADIUS,
+  ...BORDER_RADIUS,
+};

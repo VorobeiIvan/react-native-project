@@ -1,24 +1,20 @@
-import { ImageBackground, View } from "react-native";
 import { Avatar, AuthorizationForm, Title } from "../components";
-import { images } from "../utils";
 
-import styles from "./ScreenStyles";
+import Container from "../components/Containers/Container";
+import IMAGES from "../constants/images";
+import CustomImage from "../components/CustomImage/CustomImage";
 
 const LoginScreen = () => {
   return (
-    <View style={styles.container}>
-      <ImageBackground
-        source={images.bg}
-        resizeMode="cover"
-        style={styles.image}
-      />
+    <Container type={"container"}>
+      <CustomImage source={IMAGES.MAIN_BACKGROUND} type={"backgroundImage"} />
 
-      <View style={styles.contentContainer}>
+      <Container type={"contentContainer"}>
         <Avatar />
-        <Title text="Увійти" />
+        <Title text={"AUTHORIZATION_TITLE"} />
         <AuthorizationForm />
-      </View>
-    </View>
+      </Container>
+    </Container>
   );
 };
 

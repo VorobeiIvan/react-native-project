@@ -16,8 +16,7 @@ type ButtonProps = {
   onPress: () => void;
   buttonStyle?: ViewStyle;
   text?: string;
-  imageSource?: ImageSourcePropType; // Виправлений тип для зображення
-  // iconUri?: string; // Додано тип для iconUri
+  imageSource?: ImageSourcePropType;
 };
 
 const Button: FC<ButtonProps> = ({

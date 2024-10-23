@@ -1,16 +1,16 @@
-// import React from "react";
-// import { Image } from "react-native";
-// import styles from "./CustomImageStyles";
+import React from "react";
+import { Image } from "react-native";
+import styles from "./CustomImageStyles";
 
-// type ImgProps = {
-//   type?: keyof typeof styles;
-//   source: string;
-// };
+type ImgProps = {
+  type?: keyof typeof styles;
+  source: string;
+};
 
-// const CustomImage: React.FC<ImgProps> = ({ type = "image", source }) => {
-//   return (
-//     <Image source={{ uri: source }} style={[styles[type], styles.image]} />
-//   );
-// };
+const CustomImage: React.FC<ImgProps> = ({ type = "image", source }) => {
+  return (
+    <Image source={{ uri: source }} style={[styles[type], styles.image]} />
+  );
+};
 
-// export default CustomImage;
+export default CustomImage;

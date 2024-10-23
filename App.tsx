@@ -1,6 +1,12 @@
+import { Container, CustomImage } from "./components";
 import Title from "./components/Title/Title";
-import { TITLE } from "./constants";
+import { IMAGES, TITLE } from "./constants";
+import { RegistrationScreen } from "./screens";
 
 export default function App() {
-  return <Title text={TITLE.MAIN_TITLE_REGISTRATION} />;
+  return (
+    <Container type={"container"}>
+      <RegistrationScreen />
+    </Container>
+  );
 }

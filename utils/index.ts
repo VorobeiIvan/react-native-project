@@ -1,1 +1,1 @@
-// export { default as useFonts } from "../hooks/useFonts";
+export { default as useFonts } from "../hooks/useFonts";

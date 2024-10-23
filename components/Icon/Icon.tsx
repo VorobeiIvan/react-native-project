@@ -2,7 +2,7 @@
 
 import React from "react";
 import { View } from "react-native";
-// import Svg, { Path } from "react-native-svg";
+import Svg, { Path } from "react-native-svg";
 import { ICONS } from "../../constants";
 
 type IconProps = {

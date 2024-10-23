@@ -1,12 +1,12 @@
-import { Container, CustomImage } from "./components";
+import { Container, CustomImage, Icon } from "./components";
 import Title from "./components/Title/Title";
-import { IMAGES, TITLE } from "./constants";
+import { ICONS, IMAGES, TITLE } from "./constants";
 import { RegistrationScreen } from "./screens";
 
 export default function App() {
   return (
     <Container type={"container"}>
-      <RegistrationScreen />
+      <Icon name={ICONS.ADD_AVATAR_BUTTON} width={24} height={24} />
     </Container>
   );
 }

@@ -2,13 +2,13 @@ import { TextInput, View, ViewProps, TextInputProps } from "react-native";
 import { FC, useState } from "react";
 import styles from "./InputStyles";
 
-// Define InputProps without ChangeEvent
+
 type InputProps = {
   value: string;
   placeholder?: string;
   outerStyles?: ViewProps["style"];
   rightButton?: React.ReactNode;
-  onChangeText?: (text: string) => void; // Corrected to accept a string
+  onChangeText?: (text: string) => void; 
   secureTextEntry?: boolean;
   autofocus?: boolean;
   inputMode?: TextInputProps["inputMode"];
@@ -45,7 +45,7 @@ const Input: FC<InputProps> = ({
       <TextInput
         value={value}
         autoFocus={autofocus}
-        onChangeText={onChangeText} // Directly use onChangeText
+        onChangeText={onChangeText} 
         placeholder={placeholder}
         secureTextEntry={secureTextEntry}
         style={styles.text}
